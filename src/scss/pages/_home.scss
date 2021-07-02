@@ -1,0 +1,53 @@
+body {
+    background-color: $primary-color;
+}
+
+#main-container {
+    display: grid;
+    grid-template: "h" "n" "p" "f"/auto;
+    gap: 2em;
+}
+
+header {
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+    padding-top: 1em;
+}
+
+#sub-container {
+    margin-left: 5em;
+    margin-right: 5em;
+    overflow-x: hidden;
+}
+
+#page {
+    grid-area: p;
+    overflow: hidden;
+}
+
+#p-learn {
+    margin-top: 2em;
+    height: 500px;
+    .title {
+        font-size: 3em;
+    }
+}
+
+footer {
+    grid-area: f;
+}
+
+#logo {
+    margin: 2% 0 0 40%
+}
+
+#desktop-menu {
+    margin-left: 33%;
+    font-size: 1.6em;
+    .menu-item {
+        margin-right: 4%;
+    }
+}
