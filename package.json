@@ -4,8 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "webpack serve --open --config webpack.dev.js",
-        "build": "webpack --config webpack.prod.js"
+        "dev": "webpack serve --open --env env=dev",
+        "build": "cross-env NODE_ENV=production webpack  --env env=prod",
+        "start": "node server.js"
     },
     "keywords": [],
     "author": "",
@@ -25,7 +26,14 @@
         "webpack-merge": "^5.8.0"
     },
     "dependencies": {
+        "@babel/core": "^7.14.6",
         "@fortawesome/fontawesome-free": "^5.15.3",
+        "babel-loader": "^8.2.2",
+        "chalk": "^4.1.1",
+        "cross-env": "^7.0.3",
+        "cssnano": "^5.0.6",
+        "postcss-loader": "^6.1.1",
+        "postcss-preset-env": "^6.7.0",
         "resolve-url-loader": "^4.0.0",
         "three": "^0.129.0"
     }
