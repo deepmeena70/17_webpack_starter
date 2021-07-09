@@ -1,14 +1,22 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const commonPath = require('./common-paths');
 
 const config = {
     mode: 'production',
     devtool: 'source-map',
+    output: {
+      filename: 'static/[name].[chunkhash].js',
+      path: commonPath.outputPath,
+      clean: true,
+      publicPath: '',
+  },
     module:{
         rules: [
-            {
-              test:/\.html$/,
-              loader: 'html-loader'
-            },
+          {
+            test: /\html$/,
+            loader: 'html-loader'
+          },
+           
             {
                 test: /\.css$/,
                   use: [

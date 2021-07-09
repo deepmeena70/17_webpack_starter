@@ -11,7 +11,7 @@ const compiler = webpack(merge(common, config));
 app.use(
   middleware(compiler, {
     // webpack-dev-middleware options
-    publicPath: common.output.publicPath,
+    publicPath: config.output.publicPath,
   })
 );
 

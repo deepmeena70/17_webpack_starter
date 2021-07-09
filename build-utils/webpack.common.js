@@ -5,13 +5,6 @@ const config = {
     entry: {
         app: `${commonPath.appEntry}/index.js`
     },
-    output: {
-        filename: 'static/[name].[chunkhash].js',
-        path: commonPath.outputPath,
-        clean: true,
-        publicPath: '/',
-        assetModuleFilename: 'images/[contenthash][ext][query]'
-    },
     plugins: [
         new HtmlWebpackPlugin({
             template: 'public/index.html',
